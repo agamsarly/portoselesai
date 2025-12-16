@@ -1,0 +1,64 @@
+/* ====== SECTION WRAPPER ====== */
+.about-section {
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* ====== TITLE ====== */
+.about-title {
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #1d3557;
+    text-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+    animation: slideDown 1.2s ease-out forwards;
+}
+
+/* ====== TEXT ====== */
+.about-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
+    opacity: 0.9;
+}
+
+/* ====== PHOTO ====== */
+.about-photo {
+    width: 380px;
+    z-index: 10;
+    animation: floatImage 6s ease-in-out infinite;
+    margin-top: 50px; 
+}
+
+/* ====== ANIMATION ====== */
+@keyframes floatImage {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== MOBILE ADJUSTMENTS ====== */
+@media(max-width: 768px) {
+    .about-section {
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 40px;
+    }
+
+    .about-photo {
+        width: 280px;
+        margin-top: 30px;
+    }
+}

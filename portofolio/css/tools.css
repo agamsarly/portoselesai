@@ -1,0 +1,27 @@
+ /* Custom card style */
+    .tools-card {
+        background: linear-gradient(135deg, #f8f9fa, #eef2f7);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid #e5e7eb;
+        padding: 35px 25px;
+        transition: all .3s ease;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+    }
+
+    .tools-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+
+    .tools-icon {
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+        #tools {
+    position: relative;
+    left: 0;
+    right: 0;
+}

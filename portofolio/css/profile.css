@@ -1,0 +1,76 @@
+/* ===== PROFILE SECTION FIX (FINAL) ===== */
+#profiles1 {
+  min-height: calc(100vh - var(--navbar-height));
+  padding-top: var(--navbar-height);
+  scroll-margin-top: var(--navbar-height);
+}
+
+/* HERO */
+.portfolio-hero {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f8f9fa, #eef2f7);
+}
+
+/* PHOTO WRAPPER */
+.profile-photo-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.profile-photo {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 3;
+  position: relative;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  animation: floatPhoto 6s ease-in-out infinite;
+}
+
+/* BLOBS */
+.profile-photo-wrapper::before,
+.profile-photo-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(60px);
+  opacity: 0.55;
+}
+
+.profile-photo-wrapper::before {
+  background: linear-gradient(135deg, #ff8fab, #ffd6ff);
+  top: -20px;
+  left: -30px;
+}
+
+.profile-photo-wrapper::after {
+  background: linear-gradient(135deg, #a0c4ff, #bde0fe);
+  bottom: -20px;
+  right: -30px;
+}
+
+/* ANIMATION */
+@keyframes floatPhoto {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .portfolio-hero {
+    text-align: center;
+  }
+}

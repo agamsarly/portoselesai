@@ -1,0 +1,114 @@
+ :root {
+  --navbar-height: 80px;
+}
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+}
+
+/* ================= BODY OFFSET ================= */
+body {
+  overflow-x: hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+#safe-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  z-index: 999999;
+}
+
+
+/* ================= INNER ================= */
+#safe-navbar .nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* ================= BRAND ================= */
+#safe-navbar .brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+}
+
+/* ================= TOGGLE ================= */
+#safe-navbar .toggle {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* ================= MENU ================= */
+#safe-navbar .menu {
+  display: flex;
+  gap: 26px;
+}
+
+#safe-navbar .menu a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  padding: 6px 0;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* Toggle */
+  #safe-navbar .toggle {
+    display: block;
+  }
+
+  /* Anchor */
+  #safe-navbar .nav-inner {
+    position: relative;
+  }
+
+  /* MENU MOBILE (overlay, TIDAK nambah tinggi navbar) */
+  #safe-navbar .menu {
+    position: absolute;
+    top: 100%;              /* ← ini KUNCI, bukan calc */
+    left: 0;
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+
+    padding: 10px 18px;     /* ← DIPERKECIL */
+    gap: 10px;
+
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 14px 32px rgba(0,0,0,0.10);
+  }
+
+  #safe-navbar[data-open="1"] .menu {
+    display: flex;
+  }
+
+  #safe-navbar .menu a {
+    padding: 10px 0;        /* ← DIPERKECIL */
+  }
+}

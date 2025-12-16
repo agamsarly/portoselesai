@@ -1,0 +1,50 @@
+.cert-title {
+    color: #5e2be9;
+    font-size: 45px;
+}
+
+/* Horizontal scroll */
+.scroll-wrapper {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-behavior: smooth;
+}
+.scroll-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+.scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #c7c7ff;
+    border-radius: 20px;
+}
+
+/* Cards */
+.cert-card {
+    min-width: 260px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    transition: .3s ease;
+    text-align: center;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(94,43,233,0.18);
+}
+
+/* Image */
+.cert-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: .4s ease;
+}
+
+.cert-card:hover .cert-img {
+    transform: scale(1.05);
+}

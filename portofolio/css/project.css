@@ -1,0 +1,78 @@
+.project-img {
+    width: 100%;
+    height: 220px;     /* tinggi bisa disesuaikan */
+    object-fit: cover; /* otomatis crop elegan */
+    border-radius: 12px;
+}
+
+.project-title {
+    color: #5e2be9;
+    font-size: 45px;
+}
+
+/* CARD */
+.project-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: .3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.project-img-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.project-img {
+    width: 100%;
+    border-radius: 15px;
+    transition: .4s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.08);
+}
+
+/* TECH LIST */
+.project-tech {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.project-tech li {
+    background: #ecebff;
+    color: #5e2be9;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* VIEW BUTTON */
+.btn-view {
+    background: linear-gradient(90deg, #5e2be9, #8b5cf6);
+    padding: 10px 25px;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s ease;
+    display: inline-block;
+}
+
+.btn-view:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(94, 43, 233, 0.3);
+}
